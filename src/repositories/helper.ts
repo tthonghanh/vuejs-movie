@@ -138,3 +138,10 @@ export type UpdateCountryObject = {
   name: string,
   code: string
 }
+
+export type CreateEkipObject = {
+  firstName: string,
+    lastName: string,
+    genderCode: number,
+    positionCode: string
+}
