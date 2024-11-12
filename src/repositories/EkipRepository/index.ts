@@ -1,5 +1,5 @@
 import { ApplicationRepository } from "..";
-import { EkipResponse } from "../helper";
+import { CreateEkipObject, EkipResponse } from "../helper";
 
 export class EkipRepository extends ApplicationRepository {
   /**
@@ -8,6 +8,8 @@ export class EkipRepository extends ApplicationRepository {
   constructor() {
     super();
     this.getEkips = this.getEkips.bind(this);
+    this.getEkipById = this.getEkips.bind(this);
+    this.createEkip = this.createEkip.bind(this);
   }
 
   public async getEkips() : Promise<EkipResponse | Response> {
@@ -26,6 +28,16 @@ export class EkipRepository extends ApplicationRepository {
 
     const isAuthorize = await this.authorizeToken();
     if (isAuthorize) return this.getEkipById(id);
+
+    return {} as EkipResponse;
+  }
+
+  public async createEkip(createEkipObject: CreateEkipObject) : Promise<EkipResponse | Response> {
+    const ekip = await this.httpService.post('/admin/ekips', { createEkipObject });
+    if (ekip.status === 201) return ekip.data;
+
+    const isAuthorize = await this.authorizeToken();
+    if (isAuthorize) return this.createEkip(createEkipObject);
 
     return {} as EkipResponse;
   }
