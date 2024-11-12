@@ -122,3 +122,19 @@ export type EkipResponse = {
   genderCode: number,
   positionCode: string
 }
+
+export type CountryResponse = {
+  id: string,
+  name: string,
+  code: string
+}
+
+export type CreateCountryObject = {
+  name: string,
+  code: string
+}
+
+export type UpdateCountryObject = {
+  name: string,
+  code: string
+}
