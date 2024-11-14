@@ -145,3 +145,40 @@ export type CreateEkipObject = {
     genderCode: number,
     positionCode: string
 }
+export type CompanyResponse = {
+  id: string,
+  name: string,
+  countryId: string
+}
+
+export type CreateCompanyObject = {
+  name: string,
+  countryId: string
+}
+
+export type UpdateCompanyObject = {
+  name: string,
+  countryId: string
+}
+
+export type CastResponse = {
+  id: string,
+  firstName: string,
+  lastName: string,
+  description: string,
+  genderCode: number
+}
+
+export type CreateCastObject = {
+  firstName: string,
+  lastName: string,
+  description: string,
+  genderCode: number
+}
+
+export type UpdateCastObject = {
+  firstName: string,
+  lastName: string,
+  description: string,
+  genderCode: number
+}
