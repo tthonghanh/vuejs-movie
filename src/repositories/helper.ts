@@ -141,7 +141,14 @@ export type UpdateCountryObject = {
 
 export type CreateEkipObject = {
   firstName: string,
-    lastName: string,
-    genderCode: number,
-    positionCode: string
+  lastName: string,
+  genderCode: number,
+  positionCode: string
+}
+
+export type UpdateEkipObject = {
+  firstName: string,
+  lastName: string,
+  genderCode: number,
+  positionCode: string
 }
