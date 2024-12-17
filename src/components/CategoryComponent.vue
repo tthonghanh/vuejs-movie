@@ -1,7 +1,5 @@
 <template>
   <div class="category-component">
-   
-
     <div id="content-wrapper">
             <div class="container-fluid">
                <div class="video-block section-padding">
@@ -26,15 +24,6 @@
                            <a href="shop.html">
                               <img class="img-fluid" src="img/s1.png" alt="">
                               <h6>Your Life <span title="" data-placement="top" data-toggle="tooltip" data-original-title="Verified"><i class="fas fa-check-circle text-success"></i></span></h6>
-                              <p>74,853 {{ $t("views") }}</p>
-                           </a>
-                        </div>
-                     </div>
-                     <div class="col-xl-3 col-sm-6 mb-3">
-                        <div class="category-item mt-0 mb-0">
-                           <a href="shop.html">
-                              <img class="img-fluid" src="img/s2.png" alt="">
-                              <h6>Unboxing Cool <span title="" data-placement="top" data-toggle="tooltip" data-original-title="Verified"><i class="fas fa-check-circle text-success"></i></span></h6>
                               <p>74,853 {{ $t("views") }}</p>
                            </a>
                         </div>
